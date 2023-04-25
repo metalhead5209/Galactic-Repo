@@ -1,10 +1,9 @@
-import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <h1>Hello Poop</h1>
+    <main className="min-h-screen h-screen flex content-center">
+      <div className="sub-bg bg-black mx-auto my-auto" style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}>
+        <h1 className="text-center">Galactic Repo</h1>
       </div>
     </main>
   )

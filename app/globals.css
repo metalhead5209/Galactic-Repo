@@ -2,10 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+
+  @font-face {
+    font-family: 'Star-Wars';
+    src: url('../public/Starjedi-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Star-Wars-Outline';
+    src: url('../public/StarJedi-Outline.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Star-Jedi-Hollow';
+    src: url('../public/StarJedi-Hollow.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --sub-background: #1E2123;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,5 +43,24 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-end-rgb))
+  background: rgb(var(--background-end-rgb));
+  /* background-color: rgba(var(--background-end-rgb), 0.5); */
+  background-image: url('../public/repoBG2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Star-Wars';
+}
+
+.sub-bg {
+  width: 75%;
+  height: 75%;
+}
+
+
+
+ 
