@@ -10,7 +10,6 @@ export async function GET(request) {
   const res = await axios.get(`${BASE_URL}${param}`)
   const planet = await res.data;
   const planets = JSON.stringify(planet.results[0]);
-  // console.log(chars);
 
   return new NextResponse(planets);
 }
