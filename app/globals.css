@@ -73,14 +73,14 @@ h1 {
 
 @keyFrames crawl {
   0% {
-    transform: perspective(200px) rotateX(20deg) translateY(200px);
+    transform: perspective(200px) rotateX(20deg) translateY(250px);
     opacity: 1;
   }
   50% {
     opacity: 1;
   }
   100% {
-    transform: perspective(200px) rotateX(20deg) translateY(-200px);
+    transform: perspective(200px) rotateX(20deg) translateY(-250px);
     opacity: 1;
   }
 }
