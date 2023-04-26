@@ -52,13 +52,37 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: 'Star-Wars';
+  -webkit-text-stroke: 3px black;
+  text-shadow:
+    -1px -1px 0 #F5ED17,
+    1px -1px 0 #F5ED17,
+    -1px 1px 0 #F5ED17,
+    3px 3px 0 #F5ED17;
 }
 
-.sub-bg {
-  width: 75%;
-  height: 75%;
+
+
+.crawl-text {
+  transform: perspective(200px) rotateX(20deg);
+  animation: crawl 30s linear infinite;
+  overflow: hidden;
+  /* font-size: 2em; */
+}
+
+@keyFrames crawl {
+  0% {
+    transform: perspective(200px) rotateX(20deg) translateY(200px);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(200px) rotateX(20deg) translateY(-200px);
+    opacity: 1;
+  }
 }
 
 
