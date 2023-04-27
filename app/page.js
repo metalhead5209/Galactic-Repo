@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 
 export default function Home() {
   return (
@@ -6,8 +8,12 @@ export default function Home() {
       <div className="main container relative mx-auto bg-black mx-auto my-auto w-5/6 h-5/6 lg:h-3/4 rounded-lg flex xl:justify-center flex-col sm:flex-row md:flex-row lg:flex-row overflow-scroll scroll-smooth "  style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}>
 
       <div className="left order-1 flex flex-col justify-center">
+        <Link href="/TPM">
         <h1 id="link">ep.1<br />
         tpm</h1>
+        </Link>
+        {/* <h1 id="link">ep.1<br />
+        tpm</h1> */}
         <h1 id="link">ep.2<br />
         aotc</h1>
         <h1 id="link">ep.3<br />

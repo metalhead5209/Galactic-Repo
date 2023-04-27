@@ -58,18 +58,27 @@ body {
   box-sizing: border-box;
 }
 
+#tpm {
+  background-image: url('../public/TPM.jpg');
+}
+
+#aotc {
+  background-image: url('../public/AOTC.jpg');
+}
+
 
 
 h1 {
-  font-size: 2rem;
   font-family: 'Star-Wars';
   -webkit-text-stroke: 2px black;
   text-shadow:
     -1px -1px 0 #F5ED17,
     1px -1px 0 #F5ED17,
     -1px 1px 0 #F5ED17,
-    3px 3px 0 #F5ED17;
+    2px 2px 0 #F5ED17;
 }
+
+
 
 #link {
   color: black;
