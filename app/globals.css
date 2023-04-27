@@ -54,7 +54,7 @@ body {
 h1 {
   font-size: 2rem;
   font-family: 'Star-Wars';
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 2px black;
   text-shadow:
     -1px -1px 0 #F5ED17,
     1px -1px 0 #F5ED17,
@@ -62,7 +62,17 @@ h1 {
     3px 3px 0 #F5ED17;
 }
 
-
+.left {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  position: relative;
+}
+.right {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}
 
 .crawl-text {
   transform: perspective(200px) rotateX(20deg);
@@ -73,7 +83,7 @@ h1 {
 
 @keyFrames crawl {
   0% {
-    transform: perspective(200px) rotateX(20deg) translateY(250px);
+    transform: perspective(200px) rotateX(20deg) translateY(200px);
     opacity: 1;
   }
   50% {

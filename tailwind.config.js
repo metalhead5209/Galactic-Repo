@@ -18,10 +18,11 @@ module.exports = {
         bMilk: '#12faff'
       },
       screens: {
-        sm: '480px',
+        sm: '580px',
         md: '768px',
         lg: '976px',
-        xl: '1440px'
+        xl: '1280px',
+        xxl: '1536px'
       },
     },
   },
