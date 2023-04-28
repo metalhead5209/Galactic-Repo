@@ -1,3 +1,4 @@
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -6,9 +7,23 @@ export default function Home() {
       <div className="main container relative mx-auto bg-black mx-auto my-auto w-5/6 h-5/6 lg:h-3/4 rounded-lg flex xl:justify-center flex-col sm:flex-row md:flex-row lg:flex-row overflow-scroll scroll-smooth "  style={{ backgroundColor: "rgba(0, 0, 0, 0.75)" }}>
 
       <div className="left order-1 flex flex-col justify-center">
-        <h1 id="link">Characters</h1>
-        <h1 id="link">Species</h1>
-        <h1 id="link">Planets</h1>
+      <div className="left order-1 flex flex-col justify-center">
+          <Link href="/characters" className="no-underline">
+            <h1 id="link" className="hover:transition-all hover:animate-pulse">
+              characters
+            </h1>
+          </Link>
+          <Link href="/species" className="no-underline">
+            <h1 id="link" className="hover:transition-all hover:animate-pulse">
+              species
+            </h1>
+          </Link>
+          <Link href="/planets" className="no-underline">
+            <h1 id="link" className="hover:transition-all hover:animate-pulse">
+              planets
+            </h1>
+          </Link>
+        </div>
       </div>
 
         <div className="center sm:order-1 md:order-1 lg:order-1 max-w-3xl">
@@ -29,10 +44,21 @@ export default function Home() {
         </div>
 
         <div className="right order-3 sm:order-3 md:order-3 lg:order-3 flex flex-col justify-center align-center">
-          <h1 id="link">Starships</h1>
-          <h1 id="link">vehicles</h1>
-          <h1 id="link">Galactic<br />
-          Home</h1>
+        <Link href="/starships" className="no-underline">
+            <h1 id="link" className="hover:transition-all hover:animate-pulse">
+              starships
+            </h1>
+          </Link>
+          <Link href="/vehicles" className="no-underline">
+            <h1 id="link" className="hover:transition-all hover:animate-pulse">
+              vehicles
+            </h1>
+          </Link>
+          <Link href="/" className="no-underline">
+            <h1 id="link" className="hover:transition-all hover:animate-pulse">
+              galactic<br />home
+            </h1>
+          </Link>
         </div>
 
       </div>

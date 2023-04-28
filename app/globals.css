@@ -66,6 +66,24 @@ body {
   background-image: url('../public/AOTC.jpg');
 }
 
+#rots {
+  background-image: url('../public/ROTS.jpg');
+}
+
+#anh {
+  background-image: url('../public/ANH.jpg');
+}
+
+#tesb {
+  background-image: url('../public/TESB.jpeg');
+}
+
+#rotj {
+  background-image: url('../public/ROTJ.jpg');
+}
+
+
+
 
 
 h1 {
