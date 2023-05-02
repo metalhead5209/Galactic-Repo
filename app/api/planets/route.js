@@ -6,10 +6,19 @@ const BASE_URL = 'https://swapi.dev/api/planets/?search='
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const param = searchParams.get('search')
-  console.log(param);
-  const res = await axios.get(`${BASE_URL}${param}`)
-  const planet = await res.data;
-  const planets = JSON.stringify(planet.results[0]);
+  if(!param) {
+    return new NextResponse("Search Parameter not found, {status: 500}");
+  }
+  try {
+    const res = await axios.get(`${BASE_URL}${param}`)
+    if(res.data.count === 0) {
+      console.log("Planet does not exist");
+      return new NextResponse("Planet does not exist, {status: 500}");
+    }
+    const planet = JSON.stringify(res.data.results[0]);
+    return new NextResponse(planet);
+  } catch (error) {
+      console.log("Could not find Planet", error )
+  }
 
-  return new NextResponse(planets);
 }
