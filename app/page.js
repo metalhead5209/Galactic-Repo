@@ -15,7 +15,7 @@ export default function Home() {
               tpm
             </h1>
           </Link>
-          <Link href="/AOTC" className="no-underline">
+          <Link href="/TEST" className="no-underline">
             <h1 id="link" className="hover:transition-all hover:animate-pulse">
               ep.2
               <br />

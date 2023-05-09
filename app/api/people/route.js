@@ -6,6 +6,12 @@ const BASE_URL = "https://swapi.dev/api/people/?search=";
 
 const search = new SerpApi.GoogleSearch(process.env.API_KEY);
 
+const MAX_IMAGE_ID = 200;
+
+function getRandomImageId() {
+  return Math.floor(Math.random() * MAX_IMAGE_ID) + 1;
+}
+
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const query = searchParams.get("search");
@@ -27,10 +33,10 @@ export async function GET(request) {
 
     const callback = (data) => {
       const IMAGE = {
-        id: Math.floor(Math.random() * 200) + 1,
+        id: getRandomImageId(),
         url: data["images_results"][Math.floor(Math.random() * 20)]["original"],
       };
-      console.log(IMAGE.url)
+      console.log(IMAGE.url);
       return IMAGE;
     };
 
@@ -45,7 +51,6 @@ export async function GET(request) {
     }
 
     const char = JSON.stringify(response.data.results[0]);
-
     return new NextResponse(char, {
       headers: {
         "content-type": "application/json",
